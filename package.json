@@ -1,0 +1,17 @@
+{
+    "name": "raspberrypi-entryphone",
+    "version": "0.0.1",
+    "description": "Real time app to control rapsberry GPIOs to open a door",
+    "keywords": ["template", "benchmark"],
+    "repository": "https://github.com/jmestevezq/raspberrypi-entryphone.git",
+    "homepage": "http://jmestevez.com",
+    "author": "Jose Maria Estevez <me@jmestevez.com>",
+    "dependencies": {
+        "socket.io": ">=0.9.16",
+        "express": ">=4.1.1"
+    },
+    "engines": {
+        "node": ">= 0.4.1"
+    },
+    "private": true
+}

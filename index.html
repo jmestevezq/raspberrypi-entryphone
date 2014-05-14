@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="static/css/themes/default/jquery.mobile-1.4.2.min.css">
+	<script src="static/js/jquery.js"></script>
+	<script src="static/js/jquery.mobile-1.4.2.min.js"></script>
+	<script src="/socket.io/socket.io.js"></script>
+
+<script type="text/javascript">
+$( document ).ready(function() {
+	$('#switch').on( "change", (function() {
+		if($('#switch').prop('checked')){
+    		socket.emit('open');
+		}
+	}));
+});	
+
+var socket = io.connect();
+
+
+socket.on('reset', function(){
+	$('#switch').prop('checked', false);
+	$('#switch').flipswitch( "refresh" );
+});
+
+</script>
+</head>
+<body>
+
+
+<div data-role="page">
+  <div data-role="header">
+    <h1>Home Door</h1>
+  </div>
+
+  <div data-role="main" class="ui-content">
+      <label for="switch">Open door:</label>
+        <input type="checkbox" data-role="flipswitch" name="switch" id="switch">
+        <br>
+  </div>
+
+ <div data-role="footer">
+    <h1>-</h1>
+  </div>
+</div>
+
+</body>
+</html>
+
