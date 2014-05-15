@@ -13,5 +13,12 @@
     "engines": {
         "node": ">= 0.4.1"
     },
-    "private": true
+    "private": true,
+    "license": "MIT",
+    "keywords": [
+      "raspberrypi",
+      "raspberry",
+      "socket.io",
+      "gpio"
+    ]
 }
